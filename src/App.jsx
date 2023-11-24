@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import Home from './pages/Home';
 import PortfolioId from'./pages/PortfolioId'
 import { ToastContainer, Zoom } from 'react-toastify';
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
     <ToastContainer 
         transition={Zoom}
         />
+        <Footer/>
     </BrowserRouter>
   )
 }

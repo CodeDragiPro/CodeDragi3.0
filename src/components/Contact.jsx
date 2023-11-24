@@ -29,7 +29,7 @@ const Contact = () => {
   }, []);
 
   return (
-    <div>
+    <div className="pb-20">
       <form
         className="bg-gray-800 p-4 rounded"
         ref={form}
