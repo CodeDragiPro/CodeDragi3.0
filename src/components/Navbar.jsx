@@ -15,8 +15,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="p-2 flex justify-between items-center  w-full z-50 text-white top-0 bg-codedragi-tertiary">
-      <Link to="/" className="flex items-center" onClick={closeMobileMenu}>
+    <nav className=" flex justify-between items-center  w-full z-50 text-white top-0 bg-gray-900">
+      <Link to="/" className="flex items-center justify-center p-2 mt-2" onClick={closeMobileMenu}>
         <img src={logoWeb} className="w-40" alt="Logo" />
       </Link>
       <div className="hidden md:flex space-x-4">
@@ -37,18 +37,18 @@ const Navbar = () => {
         </Link>
       </div>
 
-      <div className="hidden md:flex text-white space-x-2">
+      <div className="hidden md:flex text-white space-x-2 p-2">
         <Link to="/dashboard">
           <FaSignInAlt size={24} />
         </Link>
       </div>
 
-      <div className="md:hidden text-white" onClick={toggleMobileMenu}>
+      <div className="md:hidden text-white p-2" onClick={toggleMobileMenu}>
         <FaCode size={24} />
       </div>
 
       {isMobileMenuOpen && (
-        <div className="md:hidden fixed inset-0 bg-codedragi-tertiary flex flex-col items-center justify-center z-50">
+        <div className="md:hidden fixed inset-0 bg-gray-900 flex flex-col items-center justify-center z-50">
 
           <div className="absolute top-0 right-0 mt-6 mr-4">
             <button onClick={toggleMobileMenu} className="focus:outline-none">
