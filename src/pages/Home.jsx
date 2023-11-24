@@ -10,11 +10,11 @@ const Home = () => {
       <section className="pt-4">
         <Hero />
       </section>
-      <Titles text="Ce que nous proposons" fontSize="md:text-4xl text-2xl" />
+      <Titles text="Ce que nous proposons" fontSize="md:text-4xl text-2xl" justify="center" />
       <section className="mt-2">
         <Expertise />
       </section>
-      <Titles text="portfolio" fontSize="md:text-4xl text-2xl" />
+      <Titles text="portfolio" fontSize="md:text-4xl text-2xl" justify="center" />
       <section className="mt-2">
         <Portfolio />
       </section>

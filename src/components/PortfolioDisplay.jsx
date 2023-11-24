@@ -37,7 +37,7 @@ const PortfolioDisplay = () => {
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
         {visibleProjects.map((project, index) => (
-          <Link to="#" key={index}>
+          <Link to={`/portfolio/${project.id}`} key={project.id}>
             <div className="relative">
               <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 rounded-lg">
                 <div className="border-2 border-white p-2">
@@ -46,7 +46,7 @@ const PortfolioDisplay = () => {
               </div>
               <img
                 className=" object-cover rounded-lg"
-                src={project.images}
+                src={project.images[0]}
                 alt={`Project ${index + 1}`}
               />
             </div>
