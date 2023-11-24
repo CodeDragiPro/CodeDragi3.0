@@ -4,7 +4,6 @@ import CardExpertise from "./Cards/CardExpertise";
 import WebDesignImg from "../assets/WebDesign.jpg";
 import WebDevImg from "../assets/DevelopementWeb.jpg";
 import SeoImg from "../assets/Seo.jpg";
-import Titles from "./ui/Titles";
 
 const Expertise = () => {
   const expertiseItems = [
