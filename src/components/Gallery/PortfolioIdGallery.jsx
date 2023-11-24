@@ -1,5 +1,3 @@
-// PortfolioIdGallery.js
-
 import React, { useState } from "react";
 
 const PortfolioIdGallery = ({ images, onImageClick }) => {

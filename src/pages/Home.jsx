@@ -3,6 +3,7 @@ import Hero from "../components/Hero";
 import Expertise from "../components/Expertise";
 import Portfolio from "../components/Portfolio";
 import Titles from "../components/ui/Titles";
+import Skills from "../components/Skills";
 
 const Home = () => {
   return (
@@ -17,6 +18,11 @@ const Home = () => {
       <Titles text="portfolio" fontSize="md:text-4xl text-2xl" justify="center" />
       <section className="mt-2">
         <Portfolio />
+      </section>
+      
+      <section className="mt-8">
+      <Titles text="skills" fontSize="md:text-4xl text-2xl" justify="center" />
+        <Skills/>
       </section>
     </div>
   );
