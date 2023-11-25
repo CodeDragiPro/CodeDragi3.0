@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { MdEmail } from "react-icons/md";
+import { FaUser } from "react-icons/fa";
 import Button from "./ui/Button";
 import Toast from "../components/ui/Toast";
 
@@ -44,7 +45,7 @@ const Contact = () => {
         </label>
         <div class="relative mb-6">
           <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
-            <MdEmail className="text-gray-300" />
+            <FaUser className="text-gray-300" />
           </div>
           <input
             type="text"
