@@ -39,54 +39,54 @@ const Contact = () => {
       >
         <label
           htmlFor="user_name"
-          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
         >
           Nom
         </label>
-        <div class="relative mb-6">
-          <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+        <div className="relative mb-6">
+          <div className="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
             <FaUser className="text-gray-300" />
           </div>
           <input
             type="text"
             id="user_name"
             name="from_name"
-            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="Votre nom"
             required
           />
         </div>
         <label
           htmlFor="email"
-          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
         >
           Email
         </label>
-        <div class="relative mb-6">
-          <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+        <div className="relative mb-6">
+          <div className="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
             <MdEmail className="text-gray-300" />
           </div>
           <input
             type="email"
             id="email"
             name="user_email"
-            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="Votre email"
             required
           />
         </div>
         <label
           htmlFfor="message"
-          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
         >
           Message
         </label>
-        <div class="relative mb-6">
+        <div className="relative mb-6">
           <textarea
             id="message"
             name="message"
             rows="4"
-            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="Votre message"
             required
           />

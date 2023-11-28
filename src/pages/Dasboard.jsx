@@ -50,7 +50,6 @@ const Dashboard = () => {
             if (success) {
               setNotes(await fetchNotes());
               Toast({ type: "success", message: "Note supprimé avec succès" });
-              console.log("Note deleted successfully");
             } else {
               Toast({
                 type: "error",

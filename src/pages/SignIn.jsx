@@ -35,12 +35,12 @@ const SignIn = () => {
         autoComplete="on"
         ref={form}
         id="signIn form"
-        class="max-w-[600px] w-full mx-auto bg-gray-900 p-4 rounded"
+        className="max-w-[600px] w-full mx-auto bg-gray-900 p-4 rounded"
       >
-        <div class="mb-5">
+        <div className="mb-5">
           <label
             for="email"
-            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >
             Email
           </label>
@@ -49,15 +49,15 @@ const SignIn = () => {
             onChange={(e) => setEmail(e.target.value)}
             type="email"
             id="email"
-            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="Email"
             required
           />
         </div>
-        <div class="mb-5">
+        <div className="mb-5">
           <label
             for="password"
-            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >
             Mot de passe
           </label>
@@ -65,7 +65,7 @@ const SignIn = () => {
             onChange={(e) => setPassword(e.target.value)}
             type="password"
             id="password"
-            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="••••••••"
             required
           />

@@ -9,6 +9,9 @@ import SignIn from"./pages/SignIn"
 import Settings from './pages/Settings'
 import ProtectedRoute from "./Config/ProtectedRoutes";
 import Dashboard from "./pages/Dasboard";
+import PortfolioList from "./pages/PortfolioList";
+import PortfolioNew from "./pages/PortfolioNew";
+import Clients from "./pages/Clients";
 
 function App() {
   return (
@@ -24,6 +27,30 @@ function App() {
             element={
               <ProtectedRoute>
                 <Dashboard />
+              </ProtectedRoute>
+            }
+          />
+            <Route
+            path='/dashboard/list'
+            element={
+              <ProtectedRoute>
+                <PortfolioList />
+              </ProtectedRoute>
+            }
+          />
+             <Route
+            path='/dashboard/new'
+            element={
+              <ProtectedRoute>
+                <PortfolioNew />
+              </ProtectedRoute>
+            }
+          />
+             <Route
+            path='/dashboard/clients'
+            element={
+              <ProtectedRoute>
+                <Clients />
               </ProtectedRoute>
             }
           />
