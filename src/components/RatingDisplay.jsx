@@ -12,8 +12,8 @@ const RatingDisplay = () => {
 
   const renderStars = (percentage) => {
     return (
-      <div className="w-full h-5 mx-4 bg-white rounded">
-        <div className="h-5 bg-yellow-300 rounded" style={{ width: `${percentage}%` }}></div>
+      <div className="w-full h-6 mx-4 bg-white rounded">
+        <div className="h-6 bg-yellow-300 rounded" style={{ width: `${percentage}%` }}></div>
       </div>
     );
   };
@@ -21,7 +21,7 @@ const RatingDisplay = () => {
   const renderRatingStats = (stars, percentage) => {
     return (
       <div className="flex items-center justify-center mt-4 px-4 py-2">
-        <p className="absolute text-sm font-medium  text-black">{stars} étoiles</p>
+        <p className="absolute text-sm font-medium  text-black p-2">{stars} étoiles</p>
         {renderStars(Math.round(percentage))}
         <span className="text-sm font-medium text-gray-400">{Math.round(percentage)}%</span>
       </div>
@@ -29,7 +29,7 @@ const RatingDisplay = () => {
   };
 
   return (
-    <div className=" p-4 w-full">
+    <div className=" p-4">
       {renderRatingStats("5", (ratings.filter(rating => rating === 5).length / ratings.length) * 100)}
       {renderRatingStats("4", (ratings.filter(rating => rating === 4).length / ratings.length) * 100)}
       {renderRatingStats("3", (ratings.filter(rating => rating === 3).length / ratings.length) * 100)}

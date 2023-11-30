@@ -73,6 +73,7 @@ const Footer = () => {
               CodeDragi
             </a>
             . Tous droits reservés.
+            <p>SIREN 981 765 001</p>
           </span>
 
           <div className="flex mt-4 sm:justify-center sm:mt-0">

@@ -1,6 +1,5 @@
 import React from "react";
 import Logo from "../assets/logoWeb.png";
-import Button from "./ui/Button";
 import bgHero from '../assets/test.png';
 
 const Hero = () => {
@@ -11,7 +10,7 @@ const Hero = () => {
       </div>
       <div className="inline-flex items-center justify-center w-full mt-6">
         <hr className="w-full h-px my-8 bg-white border-0"/>
-        <span className="absolute px-2 font-medium text-white -translate-x-1/2  left-1/2 bg-codedragi-primary md:text-2xl text-xl text-center w-auto">UNE IDEE POURRAIS VOUS CHANGER LA VIE</span>
+        <span className="absolute px-2 font-medium text-white -translate-x-1/2  left-1/2 bg-codedragi-primary md:text-2xl text-xl text-center w-auto">UNE IDEE POURRAIT VOUS CHANGER LA VIE</span>
       </div>
       <div className="flex items-center justify-center relative mt-4">
         <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-70 text-white p-4">

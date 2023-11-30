@@ -47,7 +47,7 @@ const PortfolioId = () => {
           <Button text="voir le site en ligne" animate="animate-bounce" />
         </Link>
       </div>
-      <TitleHr text="a propose de ce projet" size="md:text-2xl text-xl uppercase"/>
+      <TitleHr text="a propos de ce projet" size="md:text-2xl text-xl uppercase"/>
       <Blockquote text={portfolio.description} />
       <TitleHr text="details" size="md:text-2xl text-xl uppercase"/>
       <div className="flex flex-col  justify-center items-start">
