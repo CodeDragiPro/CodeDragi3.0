@@ -60,7 +60,6 @@ const ClientsModal = ({ onClose }) => {
       Toast({ type: "error", message: "Erreur lors de l'ajout du client. Veuillez réessayer." });
     }
   };
-  
 
   return (
     <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center  text-white overflow-y-auto md:pt-2 pt-[50vh] md:px-20">
@@ -75,13 +74,11 @@ const ClientsModal = ({ onClose }) => {
         </h2>
         <div>
           <form>
-            {/* Id du client*/}
             <div className="grid gap-6 mb-6 md:grid-cols-2">
-             
               <div>
                 <label
                   htmlFor="clientLastName"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-sm font-medium text-white"
                 >
                   Nom
                 </label>
@@ -91,14 +88,14 @@ const ClientsModal = ({ onClose }) => {
                   name="clientLastName"
                   value={clientLastName}
                   onChange={handleLastNameChange}
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className=" border   text-sm rounded-lg  block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                   placeholder="Nom..."
                 />
               </div>
               <div>
                 <label
                   htmlFor="clientName"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-sm font-medium text-white"
                 >
                   Prénom
                 </label>
@@ -108,14 +105,14 @@ const ClientsModal = ({ onClose }) => {
                   name="clientName"
                   value={clientFirstName}
                   onChange={handleFirstNameChange}
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className=" border  text-sm rounded-lg   block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                   placeholder="Prénom..."
                 />
               </div>
               <div>
                 <label
                   htmlFor="clientPhoneNumber"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-sm font-medium  text-white"
                 >
                   Téléphone
                 </label>
@@ -125,14 +122,14 @@ const ClientsModal = ({ onClose }) => {
                   name="clientPhoneNumber"
                   value={clientPhoneNumber}
                   onChange={handleClientPhoneNumberChange}
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className=" border  text-sm rounded-lg   block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                   placeholder="Téléphone..."
                 />
               </div>
               <div>
                 <label
                   htmlFor="clientEmail"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-sm font-medium text-white"
                 >
                   Email
                 </label>
@@ -142,14 +139,14 @@ const ClientsModal = ({ onClose }) => {
                   name="clientEmail"
                   value={clientEmail}
                   onChange={handleClientEmailChange}
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className=" border  text-sm rounded-lg   block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                   placeholder="Email..."
                 />
               </div>
               <div>
                 <label
                   htmlFor="clientDate"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-sm font-medium text-white"
                 >
                   Date
                 </label>
@@ -159,14 +156,14 @@ const ClientsModal = ({ onClose }) => {
                   name="clientDate"
                   value={clientProjectDate}
                   onChange={handleClientProjectDateChange}
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className=" border  text-sm rounded-lg   block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                   placeholder="Date..."
                 />
               </div>
               <div>
                 <label
                   htmlFor="clientProjectName"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-sm font-medium text-white"
                 >
                   Projet
                 </label>
@@ -176,7 +173,7 @@ const ClientsModal = ({ onClose }) => {
                   name="clientProjectName"
                   value={clientProjectName}
                   onChange={handleClientProjectNameChange}
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className=" border  text-sm rounded-lg   block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                   placeholder="nom du projet..."
                 />
               </div>
@@ -185,7 +182,7 @@ const ClientsModal = ({ onClose }) => {
               <div>
                 <label
                   htmlFor="clientAddress"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-sm font-medium text-white"
                 >
                   Adresse
                 </label>
@@ -194,7 +191,7 @@ const ClientsModal = ({ onClose }) => {
                   name="clientAddress"
                   value={clientAddress}
                   onChange={handleClientAddressChange}
-                  className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className=" border  text-sm rounded-lg   block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                   placeholder="adresse du client..."
                 />
               </div>

@@ -6,7 +6,7 @@ import { SiFiverr } from "react-icons/si";
 
 const Footer = () => {
   return (
-    <footer className="bg-white dark:bg-gray-900">
+    <footer className=" bg-gray-900">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
@@ -16,10 +16,10 @@ const Footer = () => {
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+              <h2 className="mb-6 text-sm font-semibold  uppercase text-white">
                 Nous suivre
               </h2>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium">
+              <ul className="text-gray-400 font-medium">
                 <li>
                   <Link
                     to="https://fr.fiverr.com/codedragi76?public_mode=true"
@@ -29,7 +29,7 @@ const Footer = () => {
                   </Link>
                 </li>
               </ul>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium">
+              <ul className="text-gray-400 font-medium">
                 <li>
                   <Link
                     to="https://www.facebook.com/profile.php?id=61553372835257"
@@ -39,7 +39,7 @@ const Footer = () => {
                   </Link>
                 </li>
               </ul>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium">
+              <ul className="text-gray-400 font-medium">
                 <li>
                   <Link
                     to="https://www.instagram.com/codedragi/"
@@ -52,17 +52,12 @@ const Footer = () => {
             </div>
 
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+              <h2 className="mb-6 text-sm font-semibold  uppercase text-white">
                 Legal
               </h2>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium">
+              <ul className="text-gray-400 font-medium">
                 <li className="mb-2">
-                  <Link to="/" className="hover:underline">
-                    Charte du site
-                  </Link>
-                </li>
-                <li className="mb-2">
-                  <Link to="/" className="hover:underline">
+                  <Link to="/conditions" className="hover:underline">
                     Termes & conditions
                   </Link>
                 </li>
@@ -70,9 +65,9 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <hr className="my-6  sm:mx-auto border-gray-700 lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
-          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+          <span className="text-sm text-gray-400 sm:text-center ">
             © 2023{" "}
             <a href="/" className="hover:underline">
               CodeDragi
@@ -83,21 +78,21 @@ const Footer = () => {
           <div className="flex mt-4 sm:justify-center sm:mt-0">
             <Link
               to="https://www.facebook.com/profile.php?id=61553372835257"
-              className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+              className="text-gray-500  hover:text-white"
             >
               <FaFacebookSquare size={20} />
               <span className="sr-only">Facebook page</span>
             </Link>
             <Link
               to="https://fr.fiverr.com/codedragi76?public_mode=true"
-              className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
+              className="text-gray-500  hover:text-white  ms-5"
             >
               <SiFiverr size={24}/>
               <span className="sr-only">Fiver page</span>
             </Link>
             <Link
               to="https://www.instagram.com/codedragi/"
-              className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
+              className="text-gray-500  hover:text-white ms-5"
             >
               <FaInstagramSquare size={20}/>
               <span className="sr-only">Instagram page</span>

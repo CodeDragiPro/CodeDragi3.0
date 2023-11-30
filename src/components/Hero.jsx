@@ -1,26 +1,27 @@
 import React from "react";
-import Titles from "./ui/Titles";
-import Logo from "../assets/CodeDragi.png";
+import Logo from "../assets/logoWeb.png";
 import Button from "./ui/Button";
+import bgHero from '../assets/test.png';
 
 const Hero = () => {
   return (
-    <div className="flex md:flex-row flex-col items-center justify-center">
-      <div className="flex flex-col items-center justify-center">
-        <img src={Logo} className="object-cover w-[60vh] mx-auto" />
+    <div className="relative">
+      <div className="mt-8">
+        <img src={Logo} className="object-cover w-[60vh] mx-auto" alt="Logo" />
       </div>
-      <div className="flex flex-col items-center justify-center">
-        <div className="italic">
-          <h1
-            className={`bg-gradient-to-r from-codedragi-secondary via-codedragi-tertiary to-codedragi-quartary text-transparent bg-clip-text  font-light border-none md:text-4xl text-2xl pb-4 text-center`}
-          >
-            une idée pourrais vous changer la vie
+      <div className="inline-flex items-center justify-center w-full mt-6">
+        <hr className="w-full h-px my-8 bg-white border-0"/>
+        <span className="absolute px-2 font-medium text-white -translate-x-1/2  left-1/2 bg-codedragi-primary md:text-2xl text-xl text-center w-auto">UNE IDEE POURRAIS VOUS CHANGER LA VIE</span>
+      </div>
+      <div className="flex items-center justify-center relative mt-4">
+        <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-70 text-white p-4">
+          <h1 className="md:text-4xl text-2xl font-bold uppercase text-center  p-4 rounded  border-2 border-white">
+            Développeur Web & Front-End
           </h1>
+          
         </div>
-        <h1 className="text-2xl text-white font-bold uppercase mb-2 text-center">
-          Développeur Web & Front-End
-        </h1>
-        <Button text="07.62.26.61.95" />
+        
+        <img src={bgHero} className="object-cover w-full md:h-[50vh]" alt="Background" />
       </div>
     </div>
   );

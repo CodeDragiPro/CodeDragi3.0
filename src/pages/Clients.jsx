@@ -146,7 +146,7 @@ const Clients = () => {
             <input
               type="text"
               id="table-search"
-              className="w-full block p-2.5 mb-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="w-full block p-2.5 mb-2 ps-10 text-sm  border  rounded-lg   bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
               placeholder="Rechercher un client"
               value={searchTerm}
               onChange={handleSearch}
@@ -156,8 +156,8 @@ const Clients = () => {
       </div>
       {isModalOpen && <ClientsModal onClose={closeModal} />}
       <div className="overflow-x-auto w-full">
-        <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-          <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+        <table className="w-full text-sm text-left rtl:text-right text-gray-400">
+          <thead className="text-xs  uppercase bg-gray-700 text-gray-400">
             <tr>
               <th scope="col" className="p-4">
                 <div className="flex items-center">
@@ -203,14 +203,14 @@ const Clients = () => {
               </th>
             </tr>
           </thead>
-          <tbody className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 ">
+          <tbody className=" border-b bg-gray-800 border-gray-700 ">
             {clients.map((client) => (
               <tr
                 key={client.id}
                 className={`${
                   selectedClients.includes(client.id)
-                    ? "bg-gray-200 dark:bg-gray-700"
-                    : "hover:bg-gray-50 dark:hover:bg-gray-600"
+                    ? "bg-gray-700"
+                    : "hover:bg-gray-600"
                 }`}
               >
                 <td className="px-4 py-4">
@@ -247,7 +247,7 @@ const Clients = () => {
               <li>
                 <a
                   href="#"
-                  className="flex items-center justify-center px-3 h-8 ms-0 leading-tight text-gray-500 bg-white border border-e-0 border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                  className="flex items-center justify-center px-3 h-8 ms-0 leading-tight   border border-e-0  rounded-s-lg  bg-gray-800 border-gray-700 text-gray-400 hover:bg-gray-700 hover:text-white"
                 >
                   Précèdent
                 </a>
@@ -257,8 +257,8 @@ const Clients = () => {
                   <a
                     href="#"
                     onClick={() => paginate(number)}
-                    className={`flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white ${
-                      currentPage === number && "bg-gray-200 dark:bg-gray-700"
+                    className={`flex items-center justify-center px-3 h-8 leading-tight  border bg-gray-800 border-gray-700 text-gray-400 hover:bg-gray-700 hover:text-white ${
+                      currentPage === number && " bg-gray-700"
                     }`}
                   >
                     {number}
@@ -268,7 +268,7 @@ const Clients = () => {
               <li>
                 <a
                   href="#"
-                  className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                  className="flex items-center justify-center px-3 h-8 leading-tight   border  rounded-e-lg  bg-gray-800 border-gray-700 text-gray-400 hover:bg-gray-700 hover:text-white"
                 >
                   Suivant
                 </a>

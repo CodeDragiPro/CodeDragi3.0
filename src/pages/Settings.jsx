@@ -3,6 +3,7 @@ import { UserAuth } from '../Config/AuthContext';
 import { FaUser } from "react-icons/fa";
 import Button from '../components/ui/Button';
 import Titles from '../components/ui/Titles';
+import TitleHr from '../components/ui/TitleHr';
 
 const Settings = () => {
   const [avatar, setAvatar] = useState(null);
@@ -41,10 +42,11 @@ const Settings = () => {
 
   return (
     <div className='m-4 flex flex-col items-center justify-center h-screen'>
-        <Titles text="Parametre utilisateur" fontSize="text-2xl"/>
+       
         <div className='my-4'>
             <img src={user.photoURL} className='rounded-full w-32 h-32 object-cover border-2 border-white'/>
         </div>
+        <TitleHr text="Paramètre utilisateur" size="md:text-2xl text-xl uppercase"/>
       <form onSubmit={handleUpdate} className='p-4 bg-gray-900 md:w-1/2 w-full'>
         <label htmlFor="input-group-1" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Pseudo</label>
         <div className="relative mb-6">

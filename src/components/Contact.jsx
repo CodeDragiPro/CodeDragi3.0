@@ -39,7 +39,7 @@ const Contact = () => {
       >
         <label
           htmlFor="user_name"
-          className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          className="block mb-2 text-sm font-medium  text-white"
         >
           Nom
         </label>
@@ -51,14 +51,14 @@ const Contact = () => {
             type="text"
             id="user_name"
             name="from_name"
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className=" border text-white text-sm rounded-lg  focus:border-blue-500 block w-full ps-10 p-2.5  bg-gray-700 border-gray-600 placeholder-gray-400  focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="Votre nom"
             required
           />
         </div>
         <label
           htmlFor="email"
-          className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          className="block mb-2 text-sm font-medium  text-white"
         >
           Email
         </label>
@@ -70,23 +70,24 @@ const Contact = () => {
             type="email"
             id="email"
             name="user_email"
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className=" border text-white text-sm rounded-lg  focus:border-blue-500 block w-full ps-10 p-2.5  bg-gray-700 border-gray-600 placeholder-gray-400  focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="Votre email"
             required
           />
         </div>
         <label
-          htmlFfor="message"
-          className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          htmlFor="message"
+          className="block mb-2 text-sm font-medium  text-white"
         >
           Message
         </label>
         <div className="relative mb-6">
+          
           <textarea
             id="message"
             name="message"
             rows="4"
-            className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className=" border text-white text-sm rounded-lg  focus:border-blue-500 block w-full  p-2.5  bg-gray-700 border-gray-600 placeholder-gray-400  focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="Votre message"
             required
           />

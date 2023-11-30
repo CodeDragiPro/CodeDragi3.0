@@ -12,6 +12,9 @@ import Dashboard from "./pages/Dasboard";
 import PortfolioList from "./pages/PortfolioList";
 import PortfolioNew from "./pages/PortfolioNew";
 import Clients from "./pages/Clients";
+import ErrorPage from "./pages/ErrorPage";
+import ThermOfUse from "./pages/ThermOfUse";
+
 
 function App() {
   return (
@@ -21,6 +24,9 @@ function App() {
       <Route path="/" element={<Home/>}/>
       <Route path="/portfolio/:id" element={<PortfolioId/>}/>
       <Route path="/signin" element={<SignIn />} />
+      <Route path="/conditions" element={<ThermOfUse />} />
+      <Route path="*" element={<ErrorPage />} />
+
       {/* PROTECTED ROUTES */}
       <Route
             path='/dashboard'
@@ -64,8 +70,11 @@ function App() {
           />
     </Routes>
     <ToastContainer 
+        theme="dark"
         transition={Zoom}
+       
         />
+        
         <Footer/>
     </BrowserRouter>
   )

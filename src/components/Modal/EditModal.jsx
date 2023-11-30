@@ -53,7 +53,7 @@ const EditModal = ({ portfolio, closeModal, updatePortfolio }) => {
               <div>
                 <label
                   htmlFor="first_name"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-sm font-medium text-white"
                 >
                   Titre
                 </label>
@@ -67,7 +67,7 @@ const EditModal = ({ portfolio, closeModal, updatePortfolio }) => {
                       title: e.target.value,
                     })
                   }
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className=" border  text-sm rounded-lg  block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                   placeholder="titre"
                 />
               </div>
@@ -75,7 +75,7 @@ const EditModal = ({ portfolio, closeModal, updatePortfolio }) => {
               <div>
                 <label
                   htmlFor="client"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-sm font-medium text-white"
                 >
                   Client
                 </label>
@@ -89,7 +89,7 @@ const EditModal = ({ portfolio, closeModal, updatePortfolio }) => {
                       client: e.target.value,
                     })
                   }
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className=" border  text-sm rounded-lg  block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                   placeholder="Doe"
                   required
                 />
@@ -97,7 +97,7 @@ const EditModal = ({ portfolio, closeModal, updatePortfolio }) => {
               <div className="w-full">
                 <label
                   htmlFor="date"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-sm font-medium text-white"
                 >
                   Date
                 </label>
@@ -113,7 +113,7 @@ const EditModal = ({ portfolio, closeModal, updatePortfolio }) => {
               <div>
                 <label
                   htmlFor="link"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-sm font-medium text-white"
                 >
                   Lien
                 </label>
@@ -127,7 +127,7 @@ const EditModal = ({ portfolio, closeModal, updatePortfolio }) => {
                       link: e.target.value,
                     })
                   }
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className=" border  text-sm rounded-lg  block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                   placeholder="Doe"
                   required
                 />
@@ -137,7 +137,7 @@ const EditModal = ({ portfolio, closeModal, updatePortfolio }) => {
               <div>
                 <label
                   htmlFor="description"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-sm font-medium text-white"
                 >
                   Description
                 </label>
@@ -150,21 +150,24 @@ const EditModal = ({ portfolio, closeModal, updatePortfolio }) => {
                       description: e.target.value,
                     })
                   }
-                  class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className=" border  text-sm rounded-lg  block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                   placeholder="Write your thoughts here..."
                 />
               </div>
 
               <div className="flex">
-                <label className="text-lg font-bold text-codedragi-blue">
-                  Categories :
+              <label
+                  htmlFor="description"
+                  className="block mt-2 text-sm font-medium text-white"
+                >
+                  Catégorie
                 </label>
                 {updatedPortfolio.selectedTypes.map((type, index) => (
                   <div key={index} className="flex items-center p-2">
                     <input
                       type="checkbox"
                       id={type}
-                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                      className="w-4 h-4 text-blue-600  rounded focus:ring-blue-600 ring-offset-gray-800 focus:ring-2 bg-gray-700 border-gray-600"
                       checked={type}
                       onChange={() => {
                         const newTypes = [...updatedPortfolio.selectedTypes];
@@ -177,7 +180,7 @@ const EditModal = ({ portfolio, closeModal, updatePortfolio }) => {
                     />
                     <label
                       htmlFor={type}
-                      className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                      className="ms-2 text-sm font-medium  text-gray-300"
                     >
                       {type}
                     </label>
@@ -185,16 +188,19 @@ const EditModal = ({ portfolio, closeModal, updatePortfolio }) => {
                 ))}
               </div>
 
-              <div className="flex">
-                <label className="text-lg font-bold text-codedragi-blue">
-                  Technologie :
+              <div className="flex items-center">
+              <label
+                  htmlFor="description"
+                  className="block mt-2 text-sm font-medium text-white"
+                >
+                  Technologie
                 </label>
                 {updatedPortfolio.selectedCategories.map((category, index) => (
                   <div key={index} className="flex items-center p-2">
                     <input
                       type="checkbox"
                       id={category}
-                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                      className="w-4 h-4 text-blue-600  rounded focus:ring-blue-600 ring-offset-gray-800 focus:ring-2 bg-gray-700 border-gray-600"
                       checked={category}
                       onChange={() => {
                         const newCategories = [
@@ -209,7 +215,7 @@ const EditModal = ({ portfolio, closeModal, updatePortfolio }) => {
                     />
                     <label
                       htmlFor={category}
-                      className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                      className="ms-2 text-sm font-medium text-gray-300"
                     >
                       {category}
                     </label>
@@ -221,7 +227,7 @@ const EditModal = ({ portfolio, closeModal, updatePortfolio }) => {
                 <div>
                   <label
                     htmlFor="font"
-                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    className="block mb-2 text-sm font-medium text-white"
                   >
                     Police
                   </label>
@@ -235,7 +241,7 @@ const EditModal = ({ portfolio, closeModal, updatePortfolio }) => {
                         font: e.target.value,
                       })
                     }
-                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    className=" border  text-sm rounded-lg  block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                     placeholder="Doe"
                     required
                   />
@@ -244,7 +250,7 @@ const EditModal = ({ portfolio, closeModal, updatePortfolio }) => {
                 <div class="">
                   <label
                     htmlFor="font"
-                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    className="block mb-2 text-sm font-medium text-white"
                   >
                     Charte graphique
                   </label>
@@ -254,7 +260,7 @@ const EditModal = ({ portfolio, closeModal, updatePortfolio }) => {
                         <input
                           type="text"
                           id={`brand-${index}`}
-                          className=" bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 cursor-not-allowed dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          className=" border  text-sm rounded-lg  block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                           value={color}
                           onChange={(e) => {
                             const newBrands = [...updatedPortfolio.brands];

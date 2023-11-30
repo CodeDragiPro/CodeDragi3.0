@@ -11,10 +11,10 @@ const PortfolioIdGallery = ({ images, onImageClick }) => {
   };
 
   return (
-    <div className="grid gap-4">
+    <div className="grid gap-4 ">
       <div>
         <img
-          className={`h-auto w-full rounded-lg cursor-pointer ${
+          className={`h-auto  w-full rounded-lg cursor-pointer ${
             selectedImage === images[0] ? "border-2 border-blue-500" : ""
           }`}
           src={selectedImage}

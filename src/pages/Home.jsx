@@ -2,36 +2,51 @@ import React from "react";
 import Hero from "../components/Hero";
 import Expertise from "../components/Expertise";
 import Portfolio from "../components/Portfolio";
-import Titles from "../components/ui/Titles";
 import Skills from "../components/Skills";
 import Contact from "../components/Contact";
+import TitleHr from '../components/ui/TitleHr'
+import Button from "../components/ui/Button";
+import RecommenationBanner from "../components/RecommenationBanner";
+import RatingDisplay from "../components/RatingDisplay";
 
 const Home = () => {
   return (
     <div className="md:px-20 px-4">
-
-      <section className="pt-4">
+      <section className="pt-4" >
         <Hero />
+        <div className="flex items-center justify-center mt-4">
+        <Button text="07.62.26.61.95" className='m-6'/>
+        </div>
       </section>
-      
-      <section className="mt-2">
-      <Titles text="Ce que nous proposons" fontSize="md:text-4xl text-2xl" justify="center" />
+
+      <section className="my-8" id="expertise">
+      <TitleHr text="CE QUE NOUS PROPOSONS" size="md:text-2xl text-xl"/>
         <Expertise />
       </section>
       
-      <section className="mt-2">
-      <Titles text="portfolio" fontSize="md:text-4xl text-2xl" justify="center" />
+      <section className="" id="projets">
+      <TitleHr text="PORTFOLIO" size="md:text-2xl text-xl"/>
         <Portfolio />
       </section>
       
-      <section className="mt-8">
-      <Titles text="skills" fontSize="md:text-4xl text-2xl" justify="center" />
+      <section>
+        <RecommenationBanner/>
+      </section>
+      
+     
+      <section className="my-8" id="skills">
+      <TitleHr text="SKILLS" size="md:text-2xl text-xl"/>
         <Skills/>
       </section>
 
-      <section className="mt-8">
-      <Titles text="Contact" fontSize="md:text-4xl text-2xl" justify="center" />
+      <section className="my-8" id="contact">
+      <TitleHr text="CONTACT" size="md:text-2xl text-xl"/>
         <Contact/>
+      </section>
+
+      <section className="my-8">
+      <TitleHr text="RECOMMANDATIONS" size="md:text-2xl text-xl"/>
+        <RatingDisplay/>
       </section>
     </div>
   );

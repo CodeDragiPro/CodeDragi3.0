@@ -7,6 +7,8 @@ import Tag from "../components/ui/Tag";
 import Button from "../components/ui/Button";
 import PortfolioIdGallery from "../components/Gallery/PortfolioIdGallery";
 import Spinner from '../components/ui/Spinner'
+import TitleHr from "../components/ui/TitleHr";
+
 
 const PortfolioId = () => {
   const { id } = useParams();
@@ -27,18 +29,13 @@ const PortfolioId = () => {
   }
 
   return (
-    <div className="flex flex-col justify-center md:px-20 px-4 text-white">
+    <div className="flex flex-col justify-center md:px-20 px-4 py-8 text-white">
       <div className="flex flex-col items-start justify-center mt-4">
         <Link to="/">
           <Button text="Retour" animate="animate-pulse" />
         </Link>
       </div>
-      <Titles
-        text={portfolio.title}
-        fontSize="md:text-6xl text-4xl"
-        justify="center"
-      />
-      <hr className="h-px my-8 bg-white border-0 dark:bg-white" />
+      <TitleHr text={portfolio.title} size="md:text-6xl text-4xl uppercase"/>
       <div className="flex items-center justify-center">
         <div
           class="blob"
@@ -50,15 +47,9 @@ const PortfolioId = () => {
           <Button text="voir le site en ligne" animate="animate-bounce" />
         </Link>
       </div>
-      <hr className="h-px my-8 bg-white border-0 dark:bg-white" />
-      <Titles
-        text="A propos de ce projet"
-        fontSize="md:text-4xl text-2xl"
-        justify="start"
-      />
+      <TitleHr text="a propose de ce projet" size="md:text-2xl text-xl uppercase"/>
       <Blockquote text={portfolio.description} />
-      <hr className="h-px my-8 bg-white border-0 dark:bg-white" />
-      <Titles text="Détails" fontSize="md:text-4xl text-2xl" justify="start" />
+      <TitleHr text="details" size="md:text-2xl text-xl uppercase"/>
       <div className="flex flex-col  justify-center items-start">
         <div className="flex justify-between items-center w-full pb-2">
           <p className="text-xl font-bold">Titre</p>
@@ -74,7 +65,7 @@ const PortfolioId = () => {
             {portfolio.date.toDate().toLocaleDateString()}
           </p>
         </div>
-        <div className="flex justify-between items-center w-full pb-2">
+        <div className="flex  md:flex-row flex-col justify-between items-start w-full  pb-2">
           <p className="text-xl font-bold">Catégories</p>
           <div className="flex space-x-2">
             {portfolio.selectedTypes.map((category, index) => (
@@ -82,7 +73,7 @@ const PortfolioId = () => {
             ))}
           </div>
         </div>
-        <div className="flex justify-between items-center w-full pb-2">
+        <div className="flex md:flex-row flex-col justify-between items-start w-full pb-2">
           <p className="text-xl font-bold">Technologies</p>
           <div className="flex space-x-2">
             {portfolio.selectedCategories.map((technology, index) => (
@@ -99,8 +90,7 @@ const PortfolioId = () => {
           <PortfolioIdGallery images={portfolio.images} />
         </div>
       </div>
-      <hr className="h-px my-8 bg-white border-0 dark:bg-white" />
-      <Titles text="Design" fontSize="md:text-4xl text-2xl" justify="start" />
+      <TitleHr text="design" size="md:text-2xl text-xl uppercase"/>
       <div className="flex justify-between items-center w-full p-2">
         <p className="text-xl font-bold">Police</p>
         <p className="text-lg italic text-gray-400">{portfolio.font}</p>

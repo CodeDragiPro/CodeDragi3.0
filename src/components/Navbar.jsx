@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 import logoWeb from "../assets/logoWeb.png";
 import { useNavigate } from "react-router-dom";
 import { FaCode, FaTimes, FaSignInAlt } from "react-icons/fa";
@@ -39,7 +40,7 @@ const Navbar = () => {
     <nav className=" flex justify-between items-center  w-full z-50 text-white top-0 bg-gray-900">
       <Link
         to="/"
-        className="flex items-center justify-center p-2 mt-2"
+        className="flex items-center justify-center md:p-2 p-4"
         onClick={closeMobileMenu}
       >
         <img src={logoWeb} className="w-40" alt="Logo" />
@@ -48,16 +49,17 @@ const Navbar = () => {
         <Link to="/" onClick={closeMobileMenu}>
           Accueil
         </Link>
-        <Link to="#expertise" onClick={closeMobileMenu}>
+        <Link to="/#expertise" onClick={closeMobileMenu}>
           Expertise
         </Link>
-        <Link to="#projets" onClick={closeMobileMenu}>
+        <Link to="/#projets" onClick={closeMobileMenu}>
           Projets
         </Link>
-        <Link to="#contact" onClick={closeMobileMenu}>
+
+        <Link to="/#contact" onClick={closeMobileMenu}>
           Contact
         </Link>
-        <Link to="#skills" onClick={closeMobileMenu}>
+        <Link to="/#skills" onClick={closeMobileMenu}>
           Skills
         </Link>
       </div>
@@ -84,45 +86,60 @@ const Navbar = () => {
               </span>
             </div>
             {isUserMenuOpen && (
-              <div className="absolute right-0 mt-2 bg-white dark:bg-gray-800 rounded-md shadow-lg z-50">
+              <div className="absolute right-0 mt-2 bg-gray-800 rounded-md shadow-lg z-50">
                 <Link
                   to="/dashboard"
-                  className="block px-4 py-2 text-gray-800 dark:text-white"
-                  onClick={closeMobileMenu}
+                  className="block px-4 py-2 text-white"
+                  onClick={() => {
+                    closeMobileMenu();
+                    setIsUserMenuOpen(false); 
+                  }}
                 >
                   Dashboard
                 </Link>
                 <Link
                   to="/dashboard/new"
-                  className="block px-4 py-2 text-gray-800 dark:text-white"
-                  onClick={closeMobileMenu}
+                  className="block px-4 py-2 text-white"
+                  onClick={() => {
+                    closeMobileMenu();
+                    setIsUserMenuOpen(false); 
+                  }}
                 >
                   Nouveau portfolio
                 </Link>
                 <Link
                   to="/dashboard/list"
-                  className="block px-4 py-2 text-gray-800 dark:text-white"
-                  onClick={closeMobileMenu}
+                  className="block px-4 py-2 text-white"
+                  onClick={() => {
+                    closeMobileMenu();
+                    setIsUserMenuOpen(false); 
+                  }}
                 >
                   Liste des portfolios
                 </Link>
                 <Link
                   to="/dashboard/clients"
-                  className="block px-4 py-2 text-gray-800 dark:text-white"
-                  onClick={closeMobileMenu}
+                  className="block px-4 py-2 text-white"
+                  onClick={() => {
+                    closeMobileMenu();
+                    setIsUserMenuOpen(false); 
+                  }}
                 >
                   Liste des clients
                 </Link>
                 <Link
                   to="/settings"
-                  className="block px-4 py-2 text-gray-800 dark:text-white"
-                  onClick={closeMobileMenu}
+                  className="block px-4 py-2 text-white"
+                  onClick={() => {
+                    closeMobileMenu();
+                    setIsUserMenuOpen(false); 
+                  }}
                 >
                   Settings
                 </Link>
                 <span
                   onClick={handleLogout}
-                  className="block px-4 py-2 text-gray-800 dark:text-white cursor-pointer"
+                  className="block px-4 py-2 text-white cursor-pointer"
                 >
                   Déconnexion
                 </span>
@@ -146,16 +163,16 @@ const Navbar = () => {
             <Link to="/" className="block" onClick={closeMobileMenu}>
               Accueil
             </Link>
-            <Link to="/expertise" onClick={closeMobileMenu}>
+            <Link to="/#expertise" onClick={closeMobileMenu}>
               Expertise
             </Link>
-            <Link to="/projets" onClick={closeMobileMenu}>
+            <Link to="/#projets" onClick={closeMobileMenu}>
               Projets
             </Link>
-            <Link to="/contact" onClick={closeMobileMenu}>
+            <Link to="/#contact" onClick={closeMobileMenu}>
               Contact
             </Link>
-            <Link to="/skills" onClick={closeMobileMenu}>
+            <Link to="/#skills" onClick={closeMobileMenu}>
               Skills
             </Link>
           </div>
@@ -181,45 +198,45 @@ const Navbar = () => {
                   </span>
                 </div>
                 {isUserMenuOpen && (
-                  <div className="absolute bottom-8 mt-2 bg-white dark:bg-gray-800 rounded-md shadow-lg">
+                  <div className="absolute bottom-8 mt-2 bg-gray-800 rounded-md shadow-lg">
                     <Link
                       to="/dashboard"
-                      className="block px-4 py-2 text-gray-800 dark:text-white"
+                      className="block px-4 py-2 text-white"
                       onClick={closeMobileMenu}
                     >
                       Dashboard
                     </Link>
                     <Link
                       to="/dashboard/new"
-                      className="block px-4 py-2 text-gray-800 dark:text-white"
+                      className="block px-4 py-2 text-white"
                       onClick={closeMobileMenu}
                     >
                       Nouveau portfolio
                     </Link>
                     <Link
                       to="/dashboard/list"
-                      className="block px-4 py-2 text-gray-800 dark:text-white"
+                      className="block px-4 py-2 text-white"
                       onClick={closeMobileMenu}
                     >
                       Liste des portfolios
                     </Link>
                     <Link
                       to="/dashboard/clients"
-                      className="block px-4 py-2 text-gray-800 dark:text-white"
+                      className="block px-4 py-2 text-white"
                       onClick={closeMobileMenu}
                     >
                       Liste des clients
                     </Link>
                     <Link
                       to="/settings"
-                      className="block px-4 py-2 text-gray-800 dark:text-white"
+                      className="block px-4 py-2 text-white"
                       onClick={closeMobileMenu}
                     >
                       Settings
                     </Link>
                     <span
                       onClick={handleLogout}
-                      className="block px-4 py-2 text-gray-800 dark:text-white cursor-pointer"
+                      className="block px-4 py-2 text-white cursor-pointer"
                     >
                       Déconnexion
                     </span>

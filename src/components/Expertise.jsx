@@ -8,7 +8,7 @@ import SeoImg from "../assets/Seo.jpg";
 const Expertise = () => {
   const expertiseItems = [
     {
-      title: "MAQUETTE",
+      title: "WEB DESIGN",
       text: "Transformez vos idées en réalité visuelle avec nos maquettes de qualité professionnelle.",
       image: WebDesignImg,
     },
@@ -24,7 +24,7 @@ const Expertise = () => {
     },
   ];
   return (
-      <div className="flex md:flex-row flex-col justify-center  md:space-x-4  md:items-stretch items-center p-4 md:space-y-0 space-y-4">
+      <div className="flex md:flex-row flex-col justify-center  md:space-x-8  md:items-stretch items-center p-4 md:space-y-0 space-y-4 w-full">
         {expertiseItems.map((item, index) => (
           <CardExpertise
             key={index}
