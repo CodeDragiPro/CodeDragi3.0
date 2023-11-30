@@ -1,4 +1,4 @@
-import { collection, addDoc, getDocs, doc, deleteDoc } from 'firebase/firestore/lite';
+import { collection, addDoc, getDocs, doc, deleteDoc, updateDoc, getDoc } from 'firebase/firestore/lite';
 import { db } from "../Config/firebase";
 import Toast from '../components/ui/Toast';
 
@@ -29,6 +29,27 @@ export const ClientsApi = {
       throw error; 
     }
   },
+  getClientById: async (clientId) => {
+    try {
+      if (!clientId) {
+        throw new Error('Client ID is not defined');
+      }
+
+      const clientRef = doc(db, 'clients', clientId);
+      const clientSnapshot = await getDoc(clientRef);
+
+      console.log('Client Snapshot:', clientSnapshot);
+
+      if (clientSnapshot.exists()) {
+        return { id: clientSnapshot.id, ...clientSnapshot.data() };
+      } else {
+        throw new Error('Client not found');
+      }
+    } catch (error) {
+      console.error('Error getting client by ID:', error);
+      throw error;
+    }
+  },
 
   deleteClient: async (clientId) => {
     try {
@@ -41,4 +62,32 @@ export const ClientsApi = {
       Toast({ type: "error", message: "Erreur lors de la suppression du client" });
     }
   },
+
+  updateClient: async (clientData) => {
+    try {
+      console.log('Updating client with data:', clientData);
+  
+      if (!clientData || !clientData.id) {
+        throw new Error('Client data or ID is not defined');
+      }
+  
+      const { id, ...updatedClientData } = clientData;
+  
+      const clientRef = doc(db, 'clients', id);
+      await updateDoc(clientRef, updatedClientData);
+  
+      Toast({ type: "success", message: "Client mis à jour avec succès" });
+      console.log('Client updated successfully.');
+      setTimeout(() => {
+        window.location.reload();
+      }, 2000);
+    } catch (error) {
+      Toast({ type: "error", message: "Echec de la mise à jour du client" });
+      console.error('Error updating client:', error);
+      throw error;
+    }
+  },
+  
+  
+  
 };

@@ -68,7 +68,6 @@ const ClientsModal = ({ onClose }) => {
         <button className="close-button  top-4 right-4 fixed" onClick={onClose}>
           <FaTimes size={24} />
         </button>
-
         <h2 className="text-2xl font-semibold mb-4 text-white text-center">
           Ajouter un client
         </h2>

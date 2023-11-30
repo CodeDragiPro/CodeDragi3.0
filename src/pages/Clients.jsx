@@ -4,9 +4,11 @@ import ClientsModal from "../components/Modal/ClientsModal";
 import { ClientsApi } from "../api/clientsApi";
 import { FaSearch, FaSortAlphaDown, FaSortAlphaUp } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
+import EditClientsModal from '../components/Modal/EditClientsModal';
 
 const Clients = () => {
   const [isModalOpen, setModalOpen] = useState(false);
+  const [isEditModalOpen, setEditModalOpen] = useState(false);
   const [clients, setClients] = useState([]);
   const [sortOrder, setSortOrder] = useState("asc");
   const [searchTerm, setSearchTerm] = useState("");
@@ -15,13 +17,24 @@ const Clients = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const clientsPerPage = 10;
   const [isMobile, setIsMobile] = useState(false);
+  const [clientToEdit, setClientToEdit] = useState(null);
 
   const openModal = () => {
     setModalOpen(true);
   };
 
+  const openEditModal = (client) => {
+    setEditModalOpen(true);
+    setClientToEdit(client);
+  };
+  
+
   const closeModal = () => {
     setModalOpen(false);
+  };
+
+  const closeEditModal = () => {
+    setEditModalOpen(false);
   };
 
   const handleSort = () => {
@@ -201,6 +214,9 @@ const Clients = () => {
               <th scope="col" className="px-6 py-3">
                 Date
               </th>
+              <th scope="col" className="px-6 py-3">
+               Action
+              </th>
             </tr>
           </thead>
           <tbody className=" border-b bg-gray-800 border-gray-700 ">
@@ -229,11 +245,17 @@ const Clients = () => {
                 </td>
                 <td className="px-6 py-4">{client.projectname}</td>
                 <td className="px-6 py-4">{client.projectdate}</td>
+                <td className="px-6 py-4"><button onClick={() => openEditModal(client)}>Modifier</button></td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
+
+
+      {isEditModalOpen && <EditClientsModal onClose={closeEditModal} clientData={clientToEdit} />}
+
+
       <div className="flex items-center justify-between">
           <button
             className="bg-gray-800 p-2 mt-2 rounded"
