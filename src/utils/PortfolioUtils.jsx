@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { fetchPortfolios } from "../api/portfolioApi";
+import { useTranslation } from "react-i18next";
 
 export const useFetchProjects = () => {
+  const [t] = useTranslation("global");
   const [projects, setProjects] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("Tous");
 
@@ -19,7 +21,7 @@ export const useFetchProjects = () => {
   };
 
   const categories = [
-    "Tous",
+    t("portfolio.portfolioButtonCategory"),
     ...new Set(projects.flatMap((project) => project.selectedTypes)),
   ];
 

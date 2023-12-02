@@ -8,8 +8,11 @@ import TitleHr from '../components/ui/TitleHr'
 import Button from "../components/ui/Button";
 import RecommenationBanner from "../components/RecommenationBanner";
 import RatingDisplay from "../components/RatingDisplay";
+import { useTranslation } from "react-i18next";
+
 
 const Home = () => {
+  const [t] = useTranslation("global");
   return (
     <div className="md:px-20 px-4">
       <section className="pt-4" >
@@ -20,7 +23,7 @@ const Home = () => {
       </section>
 
       <section className="my-8" id="expertise">
-      <TitleHr text="CE QUE NOUS PROPOSONS" size="md:text-2xl text-xl"/>
+      <TitleHr text={t("expertise.section")} size="md:text-2xl text-xl"/>
         <Expertise />
       </section>
       
@@ -45,7 +48,7 @@ const Home = () => {
       </section>
 
       <section className="my-8">
-      <TitleHr text="RECOMMANDATIONS" size="md:text-2xl text-xl"/>
+      <TitleHr text={t("testimonial.section")} size="md:text-2xl text-xl"/>
         <RatingDisplay/>
       </section>
     </div>

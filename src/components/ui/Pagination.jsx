@@ -1,6 +1,8 @@
 import React from 'react';
+import { useTranslation } from "react-i18next";
 
 const Pagination = ({ currentPage, totalPages, onPageChange }) => {
+  const [t] = useTranslation("global");
   const generatePageNumbers = () => {
     const pages = [];
     for (let i = 1; i <= totalPages; i++) {
@@ -33,7 +35,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
             onClick={() => onPageChange(currentPage - 1)}
             disabled={currentPage === 1}
           >
-            Précédent
+            {t("portfolio.paginationBackButton")}
           </a>
         </li>
         {generatePageNumbers()}
@@ -44,7 +46,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
             onClick={() => onPageChange(currentPage + 1)}
             disabled={currentPage === totalPages}
           >
-            Suivant
+            {t("portfolio.paginationNextButton")}
           </a>
         </li>
       </ul>

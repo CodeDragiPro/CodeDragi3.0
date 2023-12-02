@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { fetchRatings } from "../api/ratingApi";
+import { useTranslation } from "react-i18next";
 
 const RatingDisplay = () => {
+  const [t] = useTranslation("global");
   const [ratings, setRatings] = useState([]);
 
   useEffect(() => {
@@ -21,7 +23,7 @@ const RatingDisplay = () => {
   const renderRatingStats = (stars, percentage) => {
     return (
       <div className="flex items-center justify-center mt-4 px-4 py-2">
-        <p className="absolute text-sm font-medium  text-black p-2">{stars} étoiles</p>
+        <p className="absolute text-sm font-medium  text-black p-2">{stars}  {t("testimonial.starsText")}</p>
         {renderStars(Math.round(percentage))}
         <span className="text-sm font-medium text-gray-400">{Math.round(percentage)}%</span>
       </div>

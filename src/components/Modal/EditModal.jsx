@@ -17,7 +17,8 @@ const EditModal = ({ portfolio, closeModal, updatePortfolio }) => {
         client: updatedPortfolio.client,
         brands: updatedPortfolio.brands,
         font: updatedPortfolio.font,
-        description: updatedPortfolio.description,
+        description_fr: updatedPortfolio.description_fr,
+        description_en: updatedPortfolio.description_en,
         link: updatedPortfolio.link,
         images: updatedPortfolio.images,
         date: selectedDate,
@@ -136,18 +137,38 @@ const EditModal = ({ portfolio, closeModal, updatePortfolio }) => {
             <div className="grid gap-6 mb-6 md:grid-cols-1">
               <div>
                 <label
-                  htmlFor="description"
+                  htmlFor="description_fr"
                   className="block mb-2 text-sm font-medium text-white"
                 >
                   Description
                 </label>
                 <textarea
-                  id="message"
-                  value={updatedPortfolio.description}
+                  id="message_fr"
+                  value={updatedPortfolio.description_fr}
                   onChange={(e) =>
                     setUpdatedPortfolio({
                       ...updatedPortfolio,
-                      description: e.target.value,
+                      description_fr: e.target.value,
+                    })
+                  }
+                  className=" border  text-sm rounded-lg  block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+                  placeholder="Write your thoughts here..."
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="description_en"
+                  className="block mb-2 text-sm font-medium text-white"
+                >
+                  Description
+                </label>
+                <textarea
+                  id="message_en"
+                  value={updatedPortfolio.description_en}
+                  onChange={(e) =>
+                    setUpdatedPortfolio({
+                      ...updatedPortfolio,
+                      description_en: e.target.value,
                     })
                   }
                   className=" border  text-sm rounded-lg  block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"

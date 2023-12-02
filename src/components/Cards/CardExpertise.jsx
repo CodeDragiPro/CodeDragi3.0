@@ -10,7 +10,7 @@ const CardExpertise = ({ image, title, text }) => {
         </div>
       </div>
       <div className="px-5 pb-5 text-center p-2">
-        <h5 className="text-2xl font-semibold tracking-tight  text-white">
+        <h5 className="text-2xl font-semibold tracking-tight  text-white uppercase">
           {title}
         </h5>
         <h5 className="text-lg tracking-tight  text-white mt-2">

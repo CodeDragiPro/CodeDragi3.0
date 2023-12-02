@@ -8,9 +8,10 @@ import Button from "../components/ui/Button";
 import PortfolioIdGallery from "../components/Gallery/PortfolioIdGallery";
 import Spinner from '../components/ui/Spinner'
 import TitleHr from "../components/ui/TitleHr";
-
+import { useTranslation } from "react-i18next";
 
 const PortfolioId = () => {
+  const [t] = useTranslation("global");
   const { id } = useParams();
   const [portfolio, setPortfolio] = useState(null);
 
@@ -32,7 +33,7 @@ const PortfolioId = () => {
     <div className="flex flex-col justify-center md:px-20 px-4 py-8 text-white">
       <div className="flex flex-col items-start justify-center mt-4">
         <Link to="/">
-          <Button text="Retour" animate="animate-pulse" />
+          <Button text={t("portfolioId.BackButton")} animate="animate-pulse" />
         </Link>
       </div>
       <TitleHr text={portfolio.title} size="md:text-6xl text-4xl uppercase"/>
@@ -44,15 +45,15 @@ const PortfolioId = () => {
       </div>
       <div className="flex items-center justify-center mt-6">
         <Link to={`https:${portfolio.link}`}>
-          <Button text="voir le site en ligne" animate="animate-bounce" />
+          <Button text={t("portfolioId.LinkButton")} animate="animate-bounce" />
         </Link>
       </div>
-      <TitleHr text="a propos de ce projet" size="md:text-2xl text-xl uppercase"/>
-      <Blockquote text={portfolio.description} />
+      <TitleHr text={t("portfolioId.Section")} size="md:text-2xl text-xl uppercase"/>
+      <Blockquote text={portfolio.description_fr} />
       <TitleHr text="details" size="md:text-2xl text-xl uppercase"/>
       <div className="flex flex-col  justify-center items-start">
         <div className="flex justify-between items-center w-full pb-2">
-          <p className="text-xl font-bold">Titre</p>
+          <p className="text-xl font-bold">{t("portfolioId.CategoryTitle")}</p>
           <p className="text-lg italic text-gray-400">{portfolio.title}</p>
         </div>
         <div className="flex justify-between items-center w-full pb-2">
@@ -82,7 +83,7 @@ const PortfolioId = () => {
           </div>
         </div>
         <Titles
-          text="Gallerie"
+          text={t("portfolioId.CategoryGallery")}
           fontSize="md:text-2xl text-xl"
           justify="start"
         />
@@ -92,11 +93,11 @@ const PortfolioId = () => {
       </div>
       <TitleHr text="design" size="md:text-2xl text-xl uppercase"/>
       <div className="flex justify-between items-center w-full p-2">
-        <p className="text-xl font-bold">Police</p>
+        <p className="text-xl font-bold">{t("portfolioId.CategoryFont")}</p>
         <p className="text-lg italic text-gray-400">{portfolio.font}</p>
       </div>
       <div className="flex justify-between items-center w-full p-2">
-        <p className="text-xl font-bold">Charte graphique</p>
+        <p className="text-xl font-bold">{t("portfolioId.CategoryBrands")}</p>
         <div className="flex space-x-2">
           {portfolio.brands.map((color, index) => (
             <div
@@ -108,7 +109,7 @@ const PortfolioId = () => {
         </div>
       </div>
       <Titles
-        text="Gallerie graphique"
+        text={t("portfolioId.CategoryGraphicGallery")}
         fontSize="md:text-2xl text-xl"
         justify="start"
       />

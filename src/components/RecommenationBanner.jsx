@@ -1,30 +1,27 @@
 import React, { useState } from "react";
 import Toast from "./ui/Toast";
-import { confirmAlert } from "react-confirm-alert";
+import { useTranslation } from "react-i18next";
 import "react-confirm-alert/src/react-confirm-alert.css";
 import { addRating } from "../api/ratingApi";
 
 const RecommandationBanner = () => {
+  const [t] = useTranslation("global");
   const [rating, setRating] = useState(0);
   const [bannerClosed, setBannerClosed] = useState(false);
 
   const handleStarClick = async (starCount) => {
     setRating(starCount);
   
-    // Appeler la fonction pour ajouter la note à Firebase
     const success = await addRating(starCount);
   
     if (success) {
-      // Afficher le toast ici avec le message approprié
-      Toast({ type: "success", message: "Merci pour votre soutien!" });
+      Toast({ type: "success", message: t("toastTestimonial.success") });
   
-      // Fermer la bannière après 3 secondes
       setTimeout(() => {
         setBannerClosed(true);
       }, 3000);
     } else {
-      // Afficher un toast d'erreur si l'ajout échoue
-      Toast({ type: "error", message: "Erreur lors de l'ajout de la note." });
+      Toast({ type: "error", message: t("toastTestimonial.error") });
     }
   };
   const handleCloseBanner = async () => {
@@ -34,17 +31,16 @@ const RecommandationBanner = () => {
       const success = await addRating(rating);
 
       if (success) {
-        Toast({ type: "success", message: "Merci pour votre soutien!" });
+        Toast({ type: "success", message: t("toastTestimonial.success") });
       } else {
         Toast({
           type: "error",
-          message: "Erreur lors de l'ajout de la note à la base de données",
+          message: t("toastTestimonial.error")
         });
       }
     }
   };
 
-  // Si la bannière est fermée, ne pas l'afficher
   if (bannerClosed) {
     return null;
   }
@@ -57,10 +53,10 @@ const RecommandationBanner = () => {
     >
       <div className="mb-4 md:mb-0 md:me-4">
         <h2 className="mb-1 text-base font-semibold  text-white">
-          La recommandation est la clé...
+        {t("testimonialBanner.Title")}
         </h2>
         <p className="flex items-center text-sm font-normal  text-gray-400">
-          Vous souhaitez nous aider et nous donner une note?
+        {t("testimonialBanner.Text")}
         </p>
       </div>
       <div className="flex items-center flex-shrink-0">

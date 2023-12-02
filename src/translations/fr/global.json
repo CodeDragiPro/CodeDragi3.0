@@ -1,0 +1,92 @@
+{
+    "navbar": {
+        "homeItem": "Accueil",
+        "expertiseItem": "Expertise",
+        "projectsItem": "Projets",
+        "contactItem": "Contact",
+        "skillsItem": "Skills",
+        "loginButton": "Connexion"
+    },
+    "header": {
+        "captivateItem": "Une idée pourrait vous changer la vie",
+        "occupationItem": "Développeur web & frontend"
+    },
+    "expertise": {
+        "section": "CE QUE NOUS PROPOSONS",
+        "webDesignTitle": "webdesign",
+        "webDesignParagraph": "Transformez vos idées en réalité visuelle avec nos maquettes de qualité professionnelle.",
+        "DeveloperTitle": "Développement",
+        "DeveloperParagraph": "Transcendez les codes du numérique avec notre expertise en développement web.",
+        "SeoTitle": "S.E.O",
+        "SeoParagraph": "Optimisez votre visibilité en ligne, dominez les moteurs de recherche et laissez votre empreinte numérique rayonner."
+    },
+    "portfolio": {
+        "portfolioButtonCategory": "Tous",
+        "paginationBackButton": "Précédent",
+        "paginationNextButton": "Suivant"
+    },
+    "contact": {
+        "FirstNameLabel": "Prénom",
+        "FirstNamePlaceholder": "votre prénom",
+        "LastNameLabel": "Nom",
+        "LastNamePlaceholder": "votre nom",
+        "EmailLabel": "Email",
+        "EmailPlaceholder": "votre email",
+        "PhoneLabel": "Téléphone",
+        "PhonePlaceholder": "votre téléphone",
+        "MessageLabel": "Message",
+        "MessagePlaceholder": "votre message",
+        "SubjectLabel": "Objet",
+        "SubjectPlaceholder": "Choisir l'objet du message",
+        "SubjectOptionLabelQuestion": "Question",
+        "SubjectOptionLabelQuotation": "Devis",
+        "SubjectOptionLabelOther": "Autre",
+        "ContactButton": "Envoyer"
+    },
+    "testimonialBanner": {
+        "Title": "La recommandation est la clé",
+        "Text": "Vous souhaitez nous aider et nous donner une note?"
+    },
+    "testimonial": {
+        "section": "RECOMMANDATIONS",
+        "starsText": "étoiles"
+    },
+    "portfolioId": {
+        "BackButton": "Retour",
+        "LinkButton": "voir le site en ligne",
+        "Section": "a propos de ce projet",
+        "CategoryTitle": "Titre",
+        "CategoryGallery": "Gallerie",
+        "CategoryFont": "Police",
+        "CategoryBrands": "Charte Graphique",
+        "CategoryGraphicGallery": "Gallerie graphique"
+    },
+    "footer": {
+        "FollowSectionTitle": "Nous suivre",
+        "LegalSectionTitle": "Legal",
+        "ThermAndConditionsLink": "Conditions générales",
+        "Copyright": "Copyright © 2023 CodeDragi. Tous droits reservés."
+    },
+    "toastContact": {
+        "success": "email envoyé avec succès",
+        "error": "echec de l'envoi de l'email"
+    },
+    "toastTestimonial": {
+        "success": "avis ajouté avec succès",
+        "error": "echec de l'ajout de l'avis"
+    },
+    "404": {
+        "title": "Erreur 404",
+        "text": "Quelque chose s'est mal passé.",
+        "subtext": "Veuillez retourner a l'accueil...",
+        "button": "Accueil"
+    },
+    "login": {
+        "passwordLabel": "Mot de passe",
+        "button": "Connexion"
+    },
+    "toastLogin": {
+        "success": "Connexion réussie",
+        "error": "Echec de la connexion"
+    }
+}

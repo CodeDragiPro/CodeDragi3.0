@@ -147,7 +147,7 @@ const PortfolioList = () => {
                     <div className="text-base font-semibold">{item.title}</div>
 
                     <div className="font-normal text-gray-500">
-                      {truncateText(item.description, 7)}
+                      {truncateText(item.description_fr, 7)}
                     </div>
                   </div>
                 </th>

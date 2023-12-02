@@ -19,7 +19,8 @@ const PortfolioNew = () => {
       .map(() => React.createRef())
   );
   const fontRef = useRef();
-  const descriptionRef = useRef();
+  const descriptionFrRef = useRef();
+  const descriptionEnRef = useRef();
   const linkRef = useRef();
   const imageRef = useRef();
   const graphicsImageRef = useRef();
@@ -46,7 +47,8 @@ const PortfolioNew = () => {
     const client = clientRef.current.value;
     const brands = brandColors;
     const font = fontRef.current.value;
-    const description = descriptionRef.current.value;
+    const description_fr = descriptionFrRef.current.value;
+    const description_en = descriptionEnRef.current.value;
     const link = linkRef.current.value;
     const images = imageRef.current.files;
     const graphicsImages = graphicsImageRef.current.files;
@@ -103,7 +105,8 @@ const PortfolioNew = () => {
           client,
           brands,
           font,
-          description,
+          description_fr,
+          description_en,
           link,
           images: imageUrls,
           graphicsImages: graphicsImageUrls,
@@ -120,7 +123,8 @@ const PortfolioNew = () => {
           client,
           brands,
           font,
-          description,
+          description_fr,
+          description_en,
           link,
           images: [],
           graphicsImages: [],
@@ -255,7 +259,22 @@ const PortfolioNew = () => {
                 <textarea
                   id="description"
                   rows="4"
-                  ref={descriptionRef}
+                  ref={descriptionFrRef}
+                  className=" border   text-sm rounded-lg   block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+                  placeholder="Description..."
+                />
+              </div>
+              <div className="mt-2">
+                <label
+                  htmlFor="description"
+                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >
+                  Description anglaise :
+                </label>
+                <textarea
+                  id="description"
+                  rows="4"
+                  ref={descriptionEnRef}
                   className=" border   text-sm rounded-lg   block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                   placeholder="Description..."
                 />

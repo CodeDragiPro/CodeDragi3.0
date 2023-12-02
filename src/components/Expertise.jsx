@@ -1,25 +1,28 @@
 import React from "react";
 import CardExpertise from "./Cards/CardExpertise";
-
+import { useTranslation } from "react-i18next";
 import WebDesignImg from "../assets/WebDesign.jpg";
 import WebDevImg from "../assets/DevelopementWeb.jpg";
 import SeoImg from "../assets/Seo.jpg";
 
+// {t("expertise.webDesignTitle")}
+
 const Expertise = () => {
+  const [t] = useTranslation("global");
   const expertiseItems = [
     {
-      title: "WEB DESIGN",
-      text: "Transformez vos idées en réalité visuelle avec nos maquettes de qualité professionnelle.",
+      title: t("expertise.webDesignTitle"),
+      text: t("expertise.webDesignParagraph"),
       image: WebDesignImg,
     },
     {
-      title: "DEVELOPPEMENT",
-      text: "Transcendez les codes du numérique avec notre expertise en développement web.",
+      title: t("expertise.DeveloperTitle"),
+      text: t("expertise.DeveloperParagraph"),
       image: WebDevImg,
     },
     {
-      title: "S.E.O",
-      text: "Optimisez votre visibilité en ligne, dominez les moteurs de recherche et laissez votre empreinte numérique rayonner.",
+      title: t("expertise.SeoTitle"),
+      text: t("expertise.SeoParagraph"),
       image: SeoImg,
     },
   ];

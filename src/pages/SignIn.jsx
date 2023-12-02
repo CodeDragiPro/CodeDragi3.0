@@ -3,8 +3,10 @@ import { useNavigate } from "react-router-dom";
 import { UserAuth } from "../Config/AuthContext";
 import Button from "../components/ui/Button";
 import Toast from "../components/ui/Toast";
+import { useTranslation } from "react-i18next";
 
 const SignIn = () => {
+  const [t] = useTranslation("global");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -17,12 +19,12 @@ const SignIn = () => {
     setError("");
     try {
       await signIn(email, password);
-      Toast({ type: "success", message: "Connexion réussie!" });
+      Toast({ type: "success", message: t("toastLogin.success") });
       setTimeout(() => {
         navigate("/dashboard");
       }, 2000);
     } catch (e) {
-      Toast({ type: "error", message: "Erreur d'authentification." });
+      Toast({ type: "error", message: t("toastLogin.error") });
       setError(e.message);
       console.log(e.message);
     }
@@ -39,7 +41,7 @@ const SignIn = () => {
       >
         <div className="mb-5">
           <label
-            for="email"
+            htmlFor="email"
             className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >
             Email
@@ -56,10 +58,10 @@ const SignIn = () => {
         </div>
         <div className="mb-5">
           <label
-            for="password"
+            htmlFor="password"
             className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >
-            Mot de passe
+            {t("login.passwordLabel")}
           </label>
           <input
             onChange={(e) => setPassword(e.target.value)}
@@ -70,7 +72,7 @@ const SignIn = () => {
             required
           />
         </div>
-        <Button text="envoyer" />
+        <Button text={t("login.button")} />
       </form>
     </div>
   );

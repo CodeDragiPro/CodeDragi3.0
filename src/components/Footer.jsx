@@ -3,8 +3,10 @@ import Logo from "../assets/logoWeb.png";
 import { Link } from "react-router-dom";
 import { FaFacebookSquare, FaInstagramSquare } from "react-icons/fa";
 import { SiFiverr } from "react-icons/si";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const [t] = useTranslation("global");
   return (
     <footer className=" bg-gray-900">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
@@ -17,7 +19,7 @@ const Footer = () => {
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div>
               <h2 className="mb-6 text-sm font-semibold  uppercase text-white">
-                Nous suivre
+              {t("footer.FollowSectionTitle")}
               </h2>
               <ul className="text-gray-400 font-medium">
                 <li>
@@ -58,7 +60,7 @@ const Footer = () => {
               <ul className="text-gray-400 font-medium">
                 <li className="mb-2">
                   <Link to="/conditions" className="hover:underline">
-                    Termes & conditions
+                  {t("footer.ThermAndConditionsLink")}
                   </Link>
                 </li>
               </ul>
@@ -68,11 +70,7 @@ const Footer = () => {
         <hr className="my-6  sm:mx-auto border-gray-700 lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm text-gray-400 sm:text-center ">
-            © 2023{" "}
-            <a href="/" className="hover:underline">
-              CodeDragi
-            </a>
-            . Tous droits reservés.
+          {t("footer.Copyright")}
             <p>SIREN 981 765 001</p>
           </span>
 

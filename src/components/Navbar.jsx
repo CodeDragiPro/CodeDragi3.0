@@ -6,12 +6,23 @@ import { useNavigate } from "react-router-dom";
 import { FaCode, FaTimes, FaSignInAlt } from "react-icons/fa";
 import Button from "./ui/Button";
 import { UserAuth } from "../Config/AuthContext";
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
+  const [t, i18n] = useTranslation("global");
+  
+  const [currentLanguage, setCurrentLanguage] = useState("fr");
+
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { user, logout } = UserAuth();
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
   const navigate = useNavigate();
+
+  const handleChangeLanguage = () => {
+    const newLanguage = currentLanguage === "fr" ? "en" : "fr";
+    i18n.changeLanguage(newLanguage);
+    setCurrentLanguage(newLanguage);
+  };
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -47,26 +58,30 @@ const Navbar = () => {
       </Link>
       <div className="hidden md:flex space-x-4">
         <Link to="/" onClick={closeMobileMenu}>
-          Accueil
+          {t("navbar.homeItem")}
         </Link>
         <Link to="/#expertise" onClick={closeMobileMenu}>
-          Expertise
+          {t("navbar.expertiseItem")}
         </Link>
         <Link to="/#projets" onClick={closeMobileMenu}>
-          Projets
+          {t("navbar.projectsItem")}
         </Link>
 
         <Link to="/#contact" onClick={closeMobileMenu}>
-          Contact
+          {t("navbar.contactItem")}
         </Link>
         <Link to="/#skills" onClick={closeMobileMenu}>
-          Skills
+          {t("navbar.skillsItem")}
         </Link>
       </div>
       <div className="hidden md:flex text-white space-x-2 p-2">
+        {/* TRANSLATIONS BUTTON */}
+        <button onClick={handleChangeLanguage} className="uppercase">
+          {currentLanguage}
+        </button>
         {!user && (
           <Link to="/signin">
-            <Button text="Connexion" />
+            <Button text={t("navbar.loginButton")} />
           </Link>
         )}
 
@@ -92,7 +107,7 @@ const Navbar = () => {
                   className="block px-4 py-2 text-white"
                   onClick={() => {
                     closeMobileMenu();
-                    setIsUserMenuOpen(false); 
+                    setIsUserMenuOpen(false);
                   }}
                 >
                   Dashboard
@@ -102,7 +117,7 @@ const Navbar = () => {
                   className="block px-4 py-2 text-white"
                   onClick={() => {
                     closeMobileMenu();
-                    setIsUserMenuOpen(false); 
+                    setIsUserMenuOpen(false);
                   }}
                 >
                   Nouveau portfolio
@@ -112,7 +127,7 @@ const Navbar = () => {
                   className="block px-4 py-2 text-white"
                   onClick={() => {
                     closeMobileMenu();
-                    setIsUserMenuOpen(false); 
+                    setIsUserMenuOpen(false);
                   }}
                 >
                   Liste des portfolios
@@ -122,7 +137,7 @@ const Navbar = () => {
                   className="block px-4 py-2 text-white"
                   onClick={() => {
                     closeMobileMenu();
-                    setIsUserMenuOpen(false); 
+                    setIsUserMenuOpen(false);
                   }}
                 >
                   Liste des clients
@@ -132,7 +147,7 @@ const Navbar = () => {
                   className="block px-4 py-2 text-white"
                   onClick={() => {
                     closeMobileMenu();
-                    setIsUserMenuOpen(false); 
+                    setIsUserMenuOpen(false);
                   }}
                 >
                   Settings
@@ -148,10 +163,15 @@ const Navbar = () => {
           </div>
         )}
       </div>
-
-      <div className="md:hidden text-white p-2" onClick={toggleMobileMenu}>
-        <FaCode size={24} />
+      <div className="flex md:hidden">
+        <button onClick={handleChangeLanguage} className="uppercase ">
+          {currentLanguage}
+        </button>
+        <div className="md:hidden text-white p-2" onClick={toggleMobileMenu}>
+          <FaCode size={24} />
+        </div>
       </div>
+
       {isMobileMenuOpen && (
         <div className="md:hidden fixed inset-0 bg-gray-900 flex flex-col items-center justify-center z-50">
           <div className="absolute top-0 right-0 mt-6 mr-4">

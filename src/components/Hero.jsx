@@ -1,8 +1,10 @@
 import React from "react";
 import Logo from "../assets/logoWeb.png";
 import bgHero from '../assets/test.png';
+import { useTranslation } from "react-i18next";
 
 const Hero = () => {
+  const [t] = useTranslation("global");
   return (
     <div className="relative">
       <div className="mt-8">
@@ -10,12 +12,12 @@ const Hero = () => {
       </div>
       <div className="inline-flex items-center justify-center w-full mt-6">
         <hr className="w-full h-px my-8 bg-white border-0"/>
-        <span className="absolute px-2 font-medium text-white -translate-x-1/2  left-1/2 bg-codedragi-primary md:text-2xl text-xl text-center w-auto">UNE IDEE POURRAIT VOUS CHANGER LA VIE</span>
+        <span className="absolute px-2 font-medium text-white -translate-x-1/2  left-1/2 bg-codedragi-primary md:text-2xl text-xl text-center w-auto uppercase">{t("header.captivateItem")}</span>
       </div>
       <div className="flex items-center justify-center relative mt-4">
         <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-70 text-white p-4">
           <h1 className="md:text-4xl text-2xl font-bold uppercase text-center  p-4 rounded  border-2 border-white">
-            Développeur Web & Front-End
+          {t("header.occupationItem")}
           </h1>
           
         </div>
