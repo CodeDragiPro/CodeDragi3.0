@@ -1,92 +1,114 @@
 {
-    "navbar": {
-        "homeItem": "Home",
-        "expertiseItem": "Expertise",
-        "projectsItem": "Projects",
-        "contactItem": "Contact",
-        "skillsItem": "Skills",
-        "loginButton": "Login"
-    },
-    "header": {
-        "captivateItem": "Idea could change your life",
-        "occupationItem": "Web developer and frontend developer"
-    },
-    "expertise": {
-        "section": "WHAT WE OFFER",
-        "webDesignTitle": "webdesign",
-        "webDesignParagraph": "Bring your ideas to visual reality with our professionally crafted mockups.",
-        "DeveloperTitle": "DEVELOPMENT",
-        "DeveloperParagraph": "Transcend digital boundaries with our expertise in web development.",
-        "SeoTitle": "S.E.O",
-        "SeoParagraph": "Optimize your online visibility, dominate search engines, and let your digital footprint shine."
-    },
-    "portfolio": {
-        "portfolioButtonCategory": "All",
-        "paginationBackButton": "Previous",
-        "paginationNextButton": "Next"
-    },
-    "contact": {
-        "FirstNameLabel": "Firstname",
-        "FirstNamePlaceholder": "your firstname",
-        "LastNameLabel": "Name",
-        "LastNamePlaceholder": "your name",
-        "EmailLabel": "Email",
-        "EmailPlaceholder": "your email",
-        "PhoneLabel": "Phone",
-        "PhonePlaceholder": "your phone",
-        "MessageLabel": "Message",
-        "MessagePlaceholder": "your message",
-        "SubjectLabel": "Subject",
-        "SubjectPlaceholder": "Choose the subject of the message",
-        "SubjectOptionLabelQuestion": "Question",
-        "SubjectOptionLabelQuotation": "Quotation",
-        "SubjectOptionLabelOther": "Other",
-        "ContactButton": "Send"
-    },
-    "testimonialBanner": {
-        "Title": "Recommendation is Key",
-        "Text": "Would you like to contribute and leave a review?"
-    },
-    "testimonial": {
-        "section": "TESTIMONIALS",
-        "starsText": "stars"
-    },
-    "portfolioId": {
-        "BackButton": "Back",
-        "LinkButton": "View the website online",
-        "Section": "About this portfolio",
-        "CategoryTitle": "Title",
-        "CategoryGallery": "Gallery",
-        "CategoryFont": "Font",
-        "CategoryBrands": "Brand guidelines",
-        "CategoryGraphicGallery": "Graphic gallery"
-    },
-    "footer": {
-        "FollowSectionTitle": "Follow us",
-        "LegalSectionTitle": "Legal",
-        "ThermAndConditionsLink": "Terms and Conditions",
-        "Copyright": "Copyright © 2023 CodeDragi. All rights reserved."
-    },
-    "toastContact": {
-        "success": "Email sent successfully",
-        "error": "Failed to send the email"
-    },
-    "toastTestimonial": {
-        "success": "Testimonial added successfully",
-        "error": "Failed to add testimonial"
-    },
-    "404": {
-        "title": "Error 404",
-        "text": "Something went wrong.",
-        "subtext": "Please return to the homepage...",
-        "button": "Home"
-    },
-    "login": {
-        "passwordLabel": "Password",
-        "button": "Login"
-    },
-    "toastLogin": {
+  "navbar": {
+    "homeItem": "Home",
+    "expertiseItem": "Expertise",
+    "projectsItem": "Projects",
+    "contactItem": "Contact",
+    "skillsItem": "Skills",
+    "loginButton": "Login"
+  },
+  "header": {
+    "captivateItem": "Idea could change your life",
+    "occupationItem": "Web developer and frontend developer"
+  },
+  "expertise": {
+    "section": "WHAT WE OFFER",
+    "textTop" : "Our expertise, Your advantage.",
+    "webDesignTitle": "webdesign",
+    "webDesignParagraph": "Bring your ideas to visual reality with our professionally crafted mockups.",
+    "DeveloperTitle": "DEVELOPMENT",
+    "DeveloperParagraph": "Transcend digital boundaries with our expertise in web development.",
+    "SeoTitle": "S.E.O",
+    "SeoParagraph": "Optimize your online visibility, dominate search engines, and let your digital footprint shine."
+  },
+  "portfolio": {
+    "textTop" : "Explore the stories behind each project in our unique portfolio.",
+    "portfolioButtonCategory": "All",
+    "paginationBackButton": "Previous",
+    "paginationNextButton": "Next"
+  },
+  "skills": {
+    "textTop" : "Explore our diverse and high-performing skills."
+},
+  "contact": {
+    "textTop" : "Let's talk about your vision: Contact us and turn your ideas into reality.",
+    "FirstNameLabel": "Firstname",
+    "FirstNamePlaceholder": "your firstname",
+    "LastNameLabel": "Name",
+    "LastNamePlaceholder": "your name",
+    "EmailLabel": "Email",
+    "EmailPlaceholder": "your email",
+    "PhoneLabel": "Phone",
+    "PhonePlaceholder": "your phone",
+    "MessageLabel": "Message",
+    "MessagePlaceholder": "your message",
+    "SubjectLabel": "Subject",
+    "SubjectPlaceholder": "Choose the subject of the message",
+    "SubjectOptionLabelQuestion": "Question",
+    "SubjectOptionLabelQuotation": "Quotation",
+    "SubjectOptionLabelOther": "Other",
+    "ContactButton": "Send"
+  },
+  "testimonialBanner": {
+    "Title": "Recommendation is Key",
+    "Text": "Would you like to contribute and leave a review?"
+  },
+  "testimonial": {
+    "textTop" : "Stars guide our success. Explore the ratings of our satisfied clients.",
+    "section": "TESTIMONIALS",
+    "starsText": "stars"
+  },
+  "portfolioId": {
+    "BackButton": "Back",
+    "LinkButton": "View the website online",
+    "Section": "About this portfolio",
+    "CategoryTitle": "Title",
+    "CategoryGallery": "Gallery",
+    "CategoryFont": "Font",
+    "CategoryBrands": "Brand guidelines",
+    "CategoryGraphicGallery": "Graphic gallery"
+  },
+  "footer": {
+    "FollowSectionTitle": "Follow us",
+    "LegalSectionTitle": "Legal",
+    "ThermAndConditionsLink": "Terms and Conditions",
+    "Copyright": "Copyright © 2023 CodeDragi. All rights reserved."
+  },
+  "toastContact": {
+    "success": "Email sent successfully",
+    "error": "Failed to send the email"
+  },
+  "toastTestimonial": {
+    "success": "Testimonial added successfully",
+    "error": "Failed to add testimonial"
+  },
+  "404": {
+    "title": "Error 404",
+    "text": "Something went wrong.",
+    "subtext": "Please return to the homepage...",
+    "button": "Home"
+  },
+  "login": {
+    "passwordLabel": "Password",
+    "button": "Login"
+  },
+  "toastLogin": {
     "success": "Login successful",
     "error": "Login failed"
-    }
+  },
+  "terms": {
+    "section": "Terms and Conditions",
+    "subtitle": "By using our services, you agree to the terms and conditions outlined below.",
+    "title1": "1. Services",
+    "text1": "We provide website creation services. Each project includes a mockup, provided at the client's request.",
+    "title2": "2. Intellectual Property",
+    "text2": "The created websites remain our intellectual property, and we are the exclusive creators of the sites. They cannot be attributed to other parties without our explicit consent.",
+    "title3": "3. Payment",
+    "text3": "A 20% deposit is required before the start of the project. Once the quote is signed, the project is considered accepted.",
+    "title4": "4. Hosting",
+    "text4": "We offer to manage the renewal of hosting every year or for a longer duration, according to the client's request.",
+    "title5": "5.Contact",
+    "text5": "For any questions or concerns, please contact us at the following email address:",
+    "text6": "or by phone at"
+  }
 }

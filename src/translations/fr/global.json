@@ -13,6 +13,7 @@
     },
     "expertise": {
         "section": "CE QUE NOUS PROPOSONS",
+        "textTop" : "Notre expertise, Votre avantage.",
         "webDesignTitle": "webdesign",
         "webDesignParagraph": "Transformez vos idées en réalité visuelle avec nos maquettes de qualité professionnelle.",
         "DeveloperTitle": "Développement",
@@ -21,11 +22,16 @@
         "SeoParagraph": "Optimisez votre visibilité en ligne, dominez les moteurs de recherche et laissez votre empreinte numérique rayonner."
     },
     "portfolio": {
+        "textTop" : "Découvrez les histoires derrière chaque projet dans notre portfolio unique.",
         "portfolioButtonCategory": "Tous",
         "paginationBackButton": "Précédent",
         "paginationNextButton": "Suivant"
     },
+    "skills": {
+        "textTop" : "Explorez nos compétences diversifiées et performantes."
+    },
     "contact": {
+        "textTop" : "Parlons de votre vision : Contactez-nous et transformons vos idées en réalité.",
         "FirstNameLabel": "Prénom",
         "FirstNamePlaceholder": "votre prénom",
         "LastNameLabel": "Nom",
@@ -48,6 +54,7 @@
         "Text": "Vous souhaitez nous aider et nous donner une note?"
     },
     "testimonial": {
+        "textTop" : "Les étoiles guident notre succès. Découvrez les notations de nos clients satisfaits.",
         "section": "RECOMMANDATIONS",
         "starsText": "étoiles"
     },
@@ -88,5 +95,20 @@
     "toastLogin": {
         "success": "Connexion réussie",
         "error": "Echec de la connexion"
+    },
+    "terms":{
+        "section" : "Termes et conditions",
+        "subtitle" : "En utilisant nos services, vous acceptez les termes et conditions énoncés ci-dessous.",
+        "title1" : "1.Prestations",
+        "text1" : "Nous fournissons des services de création de sites web. Chaque projet inclut une maquette, fournie à la demande du client.",
+        "title2" : "2.Propriété intellectuelle",
+        "text2" : "Les sites créés restent notre propriété intellectuelle, et nous sommes les créateurs exclusifs des sites. Ils ne peuvent être attribués à d'autres parties sans notre consentement explicite.",
+        "title3": "3.Paiement",
+        "text3" : "Un acompte de 20% est requis avant le début du projet. Une fois le devis signé, le projet est considéré comme accepté.",
+        "title4" : "4.Hébergement",
+        "text4" : "Nous proposons de gérer le renouvellement de l'hébergement chaque année ou sur une durée plus longue, selon la demande du client.",
+        "title5" : "5.Contact",
+        "text5" : "Pour toute question ou préoccupation, veuillez nous contacter à l'adresse e-mail suivante :",
+        "text6" : "ou par téléphone au"
     }
 }

@@ -1,7 +1,7 @@
 {
-  "name": "codedragi",
+  "name": "codedragi.fr",
   "private": true,
-  "version": "0.0.5",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,12 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "-": "^0.0.1",
     "@emailjs/browser": "^3.11.0",
     "date-fns": "^2.30.0",
     "firebase": "^10.7.0",
     "firebase-tools": "^12.9.1",
-    "g": "^2.0.1",
     "i18next": "^23.7.7",
     "react": "^18.2.0",
     "react-apexcharts": "^1.4.1",
@@ -23,6 +21,7 @@
     "react-datepicker": "^4.23.0",
     "react-dom": "^18.2.0",
     "react-i18next": "^13.5.0",
+    "react-icons": "^4.12.0",
     "react-router-dom": "^6.20.0",
     "react-router-hash-link": "^2.4.3",
     "react-toastify": "^9.1.3",

@@ -5,7 +5,7 @@ import WebDesignImg from "../assets/WebDesign.jpg";
 import WebDevImg from "../assets/DevelopementWeb.jpg";
 import SeoImg from "../assets/Seo.jpg";
 
-// {t("expertise.webDesignTitle")}
+
 
 const Expertise = () => {
   const [t] = useTranslation("global");

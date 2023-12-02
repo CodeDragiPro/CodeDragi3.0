@@ -10,7 +10,7 @@ import { I18nextProvider } from 'react-i18next'
 
 i18next.init({
   interpolation: {escapeValue: false},
-  lng: "fr",
+  lng: localStorage.getItem("lng") || "fr",
   resources: {
     fr: {
       global: global_fr,

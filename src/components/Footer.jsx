@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { FaFacebookSquare, FaInstagramSquare } from "react-icons/fa";
 import { SiFiverr } from "react-icons/si";
 import { useTranslation } from "react-i18next";
+import packageJson from '../../package.json';
 
 const Footer = () => {
   const [t] = useTranslation("global");
@@ -15,6 +16,7 @@ const Footer = () => {
             <Link to="/">
               <img src={Logo} className="w-48" />
             </Link>
+            <p className="italic text-gray-400 text-sm mt-2">{t("header.captivateItem")}</p>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div>
@@ -69,9 +71,10 @@ const Footer = () => {
         </div>
         <hr className="my-6  sm:mx-auto border-gray-700 lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
-          <span className="text-sm text-gray-400 sm:text-center ">
+          <span className="text-sm text-gray-400 sm:text-start ">
           {t("footer.Copyright")}
             <p>SIREN 981 765 001</p>
+            <p>Version: {packageJson.version}</p>
           </span>
 
           <div className="flex mt-4 sm:justify-center sm:mt-0">

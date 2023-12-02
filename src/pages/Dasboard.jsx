@@ -11,7 +11,7 @@ import { confirmAlert } from "react-confirm-alert";
 import "react-confirm-alert/src/react-confirm-alert.css";
 import Toast from "../components/ui/Toast";
 import { getCurrentDate, getCurrentTime } from "../utils/DashboardUtils";
-import { fetchNotes, deleteNote } from "../utils/NotesUtils";
+import { fetchNotes, deleteNote } from "../api/notesApi";
 import { useFetchProjects } from "../utils/PortfolioUtils";
 
 const Dashboard = () => {

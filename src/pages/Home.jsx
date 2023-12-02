@@ -24,11 +24,13 @@ const Home = () => {
 
       <section className="my-8" id="expertise">
       <TitleHr text={t("expertise.section")} size="md:text-2xl text-xl"/>
+      <p className="italic text-center text-gray-400 md:text-xl text-medium">{t("expertise.textTop")}</p>
         <Expertise />
       </section>
       
       <section className="" id="projets">
       <TitleHr text="PORTFOLIO" size="md:text-2xl text-xl"/>
+      <p className="italic text-center text-gray-400 md:text-xl text-medium">{t("portfolio.textTop")}</p>
         <Portfolio />
       </section>
       
@@ -36,19 +38,21 @@ const Home = () => {
         <RecommenationBanner/>
       </section>
       
-     
       <section className="my-8" id="skills">
       <TitleHr text="SKILLS" size="md:text-2xl text-xl"/>
+      <p className="italic text-center text-gray-400 md:text-xl text-medium">{t("skills.textTop")}</p>
         <Skills/>
       </section>
 
       <section className="my-8" id="contact">
       <TitleHr text="CONTACT" size="md:text-2xl text-xl"/>
+      <p className="italic text-center text-gray-400 md:text-xl text-medium">{t("contact.textTop")}</p>
         <Contact/>
       </section>
 
       <section className="my-8">
       <TitleHr text={t("testimonial.section")} size="md:text-2xl text-xl"/>
+      <p className="italic text-center text-gray-400 md:text-xl text-medium">{t("testimonial.textTop")}</p>
         <RatingDisplay/>
       </section>
     </div>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Toast from "./ui/Toast";
 import { useTranslation } from "react-i18next";
 import "react-confirm-alert/src/react-confirm-alert.css";
@@ -9,14 +9,27 @@ const RecommandationBanner = () => {
   const [rating, setRating] = useState(0);
   const [bannerClosed, setBannerClosed] = useState(false);
 
+  // Check if the user has already voted in localStorage
+  const hasVoted = localStorage.getItem("hasVoted");
+
+  useEffect(() => {
+    // If the user has already voted, close the banner
+    if (hasVoted) {
+      setBannerClosed(true);
+    }
+  }, [hasVoted]);
+
   const handleStarClick = async (starCount) => {
     setRating(starCount);
-  
+
     const success = await addRating(starCount);
-  
+
     if (success) {
       Toast({ type: "success", message: t("toastTestimonial.success") });
-  
+
+      // Set the "hasVoted" flag in localStorage
+      localStorage.setItem("hasVoted", "true");
+
       setTimeout(() => {
         setBannerClosed(true);
       }, 3000);
@@ -24,6 +37,7 @@ const RecommandationBanner = () => {
       Toast({ type: "error", message: t("toastTestimonial.error") });
     }
   };
+
   const handleCloseBanner = async () => {
     setBannerClosed(true);
 

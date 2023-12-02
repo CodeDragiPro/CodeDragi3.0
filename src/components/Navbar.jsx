@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-// import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import logoWeb from "../assets/logoWeb.png";
 import { useNavigate } from "react-router-dom";
@@ -10,18 +9,24 @@ import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
   const [t, i18n] = useTranslation("global");
-  
-  const [currentLanguage, setCurrentLanguage] = useState("fr");
+  const [currentLanguage, setCurrentLanguage] = useState(
+    localStorage.getItem("lng") || "fr"
+  );
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { user, logout } = UserAuth();
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
   const navigate = useNavigate();
 
+  useEffect(() => {
+    i18n.changeLanguage(currentLanguage);
+  }, [currentLanguage, i18n]);
+
   const handleChangeLanguage = () => {
     const newLanguage = currentLanguage === "fr" ? "en" : "fr";
     i18n.changeLanguage(newLanguage);
     setCurrentLanguage(newLanguage);
+    localStorage.setItem('lng',newLanguage)
   };
 
   const toggleMobileMenu = () => {
@@ -164,7 +169,7 @@ const Navbar = () => {
         )}
       </div>
       <div className="flex md:hidden">
-        <button onClick={handleChangeLanguage} className="uppercase ">
+        <button onClick={handleChangeLanguage} className="uppercase np">
           {currentLanguage}
         </button>
         <div className="md:hidden text-white p-2" onClick={toggleMobileMenu}>

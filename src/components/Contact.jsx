@@ -32,7 +32,7 @@ const Contact = () => {
   }, []);
 
   return (
-    <div className="flex md:flex-row flex-col items-center justify-center w-full bg-gray-800 relative h-scrren">
+    <div className="flex md:flex-row flex-col items-center justify-center w-full bg-gray-800 relative h-screen mt-4">
      
       <form
         className="p-4 rounded w-full"
